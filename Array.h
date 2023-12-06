@@ -25,6 +25,7 @@ class Array {
         const T& operator[](int index) const;
         int getSize() const;
         bool isFull() const;
+        void clear();
     
     private:
         int numElements;
@@ -96,6 +97,14 @@ int Array<T>::getSize() const{
 template <typename T>
 bool Array<T>::isFull() const{
     return numElements >= MAX_ARR;
+}
+
+template <typename T>
+void Array<T>::clear() {
+    for (int i = 0; i < numElements; i++) {
+        delete elements[i];
+    }
+    numElements = 0;
 }
 
 

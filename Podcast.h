@@ -12,13 +12,14 @@ using namespace std;
 class Podcast {
     public:
         Podcast(const string& title, const string& host);
+        ~Podcast();
 
 
         bool equals(const string& title) const;
         Episode* get(int index);
         int getSize() const;
         void print(ostream& os) const;
-        void printWithEpisode(ostream& os) const;
+        void printWithEpisodes(ostream& os) const;
         void add(Episode* episode);
 
         friend ostream& operator<<(ostream& os, const Podcast& podcast);
@@ -27,6 +28,6 @@ class Podcast {
         string title;
         string host;
         Array<Episode*> episodes;
-}
+};
 
-#endif
+#endif 

@@ -3,9 +3,7 @@
 #include <limits>
 #include <vector>
 
-View::View(){
-  
-}
+View::View() : player(&audioPlayer){}
 
 void View::menu(vector<string>& menu, int& choice)
 {
@@ -116,7 +114,11 @@ void View::promptVideo(){
   toggleVideo(choice == 2);
 }
 
-void View::toggleVideo(bool video){
-  
+void View::toggleVideo(bool video) {
+    if (video) {
+        player = &videoPlayer;
+    } else {
+        player = &audioPlayer;
+    }
 }
 

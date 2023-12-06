@@ -29,6 +29,8 @@ class View {
 
 
 	private:
+        AudioPlayer audioPlayer;
+        VideoPlayer videoPlayer;
 		PodcastPlayer* player;	
 		
 };

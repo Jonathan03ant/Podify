@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <random>
+#include <fstream>
 #include <unordered_set>
 #include <sstream>
 #include "Podify.h"
