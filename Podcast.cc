@@ -21,7 +21,9 @@ void Podcast::printWithEpisode(ostream& os) const{
         os << *episodes[i];
     }
 }
-
+int Podcast::getSize() const{
+    return episodes.getSize();
+}
 void Podcast::add(Episode* episode){
     episodes += episode;
 }

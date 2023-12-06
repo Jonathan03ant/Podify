@@ -16,7 +16,7 @@ class Podcast {
 
         bool equals(const string& title) const;
         Episode* get(int index);
-        int getSide() const;
+        int getSize() const;
         void print(ostream& os) const;
         void printWithEpisode(ostream& os) const;
         void add(Episode* episode);
